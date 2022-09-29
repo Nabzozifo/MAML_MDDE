@@ -44,7 +44,7 @@
       ]
     ]
   },
-  "heartbeat": "2022-09-29T16:41:44.960006",
+  "heartbeat": "2022-09-29T16:47:28.138697",
   "host": {
     "ENV": {},
     "cpu": "Intel(R) Core(TM) i7-4770HQ CPU @ 2.20GHz",
@@ -89,5 +89,6 @@
   "resources": [],
   "result": null,
   "start_time": "2022-09-29T16:41:02.913857",
-  "status": "RUNNING"
+  "status": "INTERRUPTED",
+  "stop_time": "2022-09-29T16:47:28.149114"
 }

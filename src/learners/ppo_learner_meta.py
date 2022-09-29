@@ -229,7 +229,7 @@ class PPOMetaLearner:
             meta_loss.backward()
             grad_norm1 = th.nn.utils.clip_grad_norm_(
                 self.agent_params, self.args.grad_norm_clip)
-            # self.agent_optimiser.step()
+            self.agent_optimiser.step()
 
         self.old_mac.load_state(self.mac)
         grad_norm2 = th.nn.utils.clip_grad_norm_(
@@ -300,7 +300,7 @@ class PPOMetaLearner:
         loss_meta = ((rewards + masked_td_error) ** 2).sum() / mask.sum()
         self.critic_optimiser.zero_grad()
         loss_meta.backward()
-        # self.critic_optimiser.step()
+        self.critic_optimiser.step()
 
         # running_log["critic_loss"].append(loss.item())
         # running_log["critic_grad_norm"].append(grad_norm.item())

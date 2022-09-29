@@ -1,0 +1,28 @@
+{
+  "ep_length_mean": [
+    108.0
+  ],
+  "ep_length_mean_T": [
+    108
+  ],
+  "return_mean": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 62667.40685982758
+    }
+  ],
+  "return_mean_T": [
+    108
+  ],
+  "return_std": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 0.0
+    }
+  ],
+  "return_std_T": [
+    108
+  ]
+}
