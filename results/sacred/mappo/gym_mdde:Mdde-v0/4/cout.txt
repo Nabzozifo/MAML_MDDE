@@ -256,3 +256,38 @@
   v = th.tensor(v, dtype=dtype, device=self.device)
 [INFO 13:03:54] my_main t_env: 1990 / 20500000
 [INFO 13:03:54] my_main Estimated time left: 1 hours, 39 minutes, 10 seconds. Time passed: 15 seconds
+[INFO 13:26:33] my_main Recent Stats | t_env:      51740 | Episode:      260
+advantage_mean:            0.1184	agent_grad_norm:           0.2930	critic_grad_norm:          5.8757	critic_loss:               0.6610
+ep_length_mean:          199.0000	pg_loss:                  -0.1330	pi_max:                    0.3349	q_taken_mean:              0.2405
+return_mean:             102385.5602	return_std:              15691.1308	target_mean:               0.3589	td_error_abs:              0.6366
+test_ep_length_mean:     199.0000	test_return_mean:        52178.9684	test_return_std:         19110.0598	
+[INFO 13:27:15] my_main t_env: 53730 / 20500000
+[INFO 13:27:15] my_main Estimated time left: 6 days, 9 hours, 49 minutes, 16 seconds. Time passed: 23 minutes, 36 seconds
+[INFO 13:48:56] my_main Recent Stats | t_env:     103480 | Episode:      520
+advantage_mean:            0.0328	agent_grad_norm:           0.1079	critic_grad_norm:          2.2237	critic_loss:               0.6732
+ep_length_mean:          199.0000	pg_loss:                  -0.0470	pi_max:                    0.3248	q_taken_mean:              0.1832
+return_mean:             131433.9793	return_std:              12122.4280	target_mean:               0.2160	td_error_abs:              0.6406
+test_ep_length_mean:     199.0000	test_return_mean:        91064.6730	test_return_std:         15933.7359	
+[INFO 13:49:32] my_main t_env: 105470 / 20500000
+[INFO 13:49:32] my_main Estimated time left: 6 days, 2 hours, 21 minutes, 56 seconds. Time passed: 45 minutes, 53 seconds
+[INFO 14:12:21] my_main Recent Stats | t_env:     155220 | Episode:      780
+advantage_mean:            0.0297	agent_grad_norm:           0.2240	critic_grad_norm:          1.8158	critic_loss:               0.7570
+ep_length_mean:          199.0000	pg_loss:                  -0.0436	pi_max:                    0.3632	q_taken_mean:              0.2219
+return_mean:             132221.2240	return_std:              11900.6280	target_mean:               0.2517	td_error_abs:              0.6853
+test_ep_length_mean:     199.0000	test_return_mean:        104897.6165	test_return_std:         14587.8970	
+[INFO 14:13:07] my_main t_env: 157210 / 20500000
+[INFO 14:13:07] my_main Estimated time left: 6 days, 10 hours, 29 minutes, 54 seconds. Time passed: 1 hours, 9 minutes, 27 seconds
+[INFO 14:42:27] my_main Recent Stats | t_env:     206960 | Episode:     1040
+advantage_mean:           -0.0096	agent_grad_norm:           0.1226	critic_grad_norm:          2.8609	critic_loss:               0.7393
+ep_length_mean:          199.0000	pg_loss:                  -0.0031	pi_max:                    0.4414	q_taken_mean:              0.3004
+return_mean:             135854.1627	return_std:              13912.2446	target_mean:               0.2908	td_error_abs:              0.6806
+test_ep_length_mean:     199.0000	test_return_mean:        113318.8997	test_return_std:         14133.1268	
+[INFO 14:43:49] my_main t_env: 208950 / 20500000
+[INFO 14:43:49] my_main Estimated time left: 8 days, 8 hours, 38 minutes, 0 seconds. Time passed: 1 hours, 40 minutes, 9 seconds
+[INFO 15:09:17] my_main Recent Stats | t_env:     258700 | Episode:     1300
+advantage_mean:           -0.0179	agent_grad_norm:           0.1223	critic_grad_norm:          1.7092	critic_loss:               0.7994
+ep_length_mean:          199.0000	pg_loss:                   0.0042	pi_max:                    0.4070	q_taken_mean:              0.3066
+return_mean:             136337.6240	return_std:              12662.4071	target_mean:               0.2887	td_error_abs:              0.7091
+test_ep_length_mean:     199.0000	test_return_mean:        118024.2665	test_return_std:         13942.5511	
+[INFO 15:09:59] my_main t_env: 260690 / 20500000
+[INFO 15:09:59] my_main Estimated time left: 7 days, 2 hours, 40 minutes, 21 seconds. Time passed: 2 hours, 6 minutes, 20 seconds

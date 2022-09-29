@@ -189,8 +189,10 @@ def run_sequential(args, logger):
         "Beginning training for {} timesteps".format(args.t_max))
 
     while runner.t_env <= args.t_max:
-        loss1 = 0  # [0 for _ in range(len(learner.agent_params))]
-        loss2 = 0  # [0 for _ in range(len(learner.critic_params))]
+        # loss1 = 0  # [0 for _ in range(len(learner.agent_params))]
+        # loss2 = 0  # [0 for _ in range(len(learner.critic_params))]
+        loss1 = [0 for _ in range(len(learner.agent_params))]
+        loss2 = [0 for _ in range(len(learner.critic_params))]
 
         for task in tasks:
             # sample new env
@@ -223,14 +225,14 @@ def run_sequential(args, logger):
                 loss11, loss22 = learner.train_meta(
                     new_episode_sample, runner.t_env, episode)
 
-                loss1 += loss11
-                loss2 += loss22
+                # loss1 += loss11
+                # loss2 += loss22
 
-                # for i in range(len(loss1)):
-                #     loss1[i] += loss11[i].grad
+                for i in range(len(loss1)):
+                    loss1[i] += loss11[i].grad
 
-                # for j in range(len(loss2)):
-                #     loss2[j] += loss22[j].grad
+                for j in range(len(loss2)):
+                    loss2[j] += loss22[j].grad
 
             # Execute test runs once in a while
             n_test_runs = max(1, args.test_nepisode // runner.batch_size)

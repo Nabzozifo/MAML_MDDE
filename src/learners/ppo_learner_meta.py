@@ -118,7 +118,7 @@ class PPOMetaLearner:
             loss2.backward(retain_graph=True)
             grad_norm = th.nn.utils.clip_grad_norm_(
                 self.agent_params, self.args.grad_norm_clip)
-            self.agent_optimiser.step()
+            # self.agent_optimiser.step()
 
     # sum_grad1 = 0
     # for param1 in self.mac.parameters():
@@ -129,7 +129,7 @@ class PPOMetaLearner:
             loss1.backward(retain_graph=True)
             grad_norm = th.nn.utils.clip_grad_norm_(
                 self.critic_params, self.args.grad_norm_clip)
-            self.critic_optimiser.step()
+            # self.critic_optimiser.step()
 
         # sum_grad2 = 0
         # for param2 in self.critic.parameters():
@@ -239,13 +239,13 @@ class PPOMetaLearner:
         # print(meta_loss.sum().item())
         # print(loss_meta.sum().item())
 
-        self.critic_training_steps += 1
-        if self.args.target_update_interval_or_tau > 1 and (
-                self.critic_training_steps - self.last_target_update_step) / self.args.target_update_interval_or_tau >= 1.0:
-            self._update_targets_hard()
-            self.last_target_update_step = self.critic_training_steps
-        elif self.args.target_update_interval_or_tau <= 1.0:
-            self._update_targets_soft(self.args.target_update_interval_or_tau)
+        # self.critic_training_steps += 1
+        # if self.args.target_update_interval_or_tau > 1 and (
+        #         self.critic_training_steps - self.last_target_update_step) / self.args.target_update_interval_or_tau >= 1.0:
+        #     self._update_targets_hard()
+        #     self.last_target_update_step = self.critic_training_steps
+        # elif self.args.target_update_interval_or_tau <= 1.0:
+        #     self._update_targets_soft(self.args.target_update_interval_or_tau)
 
         sum1 = meta_loss.sum().item()
         sum2 = loss_meta.sum().item()
@@ -266,7 +266,7 @@ class PPOMetaLearner:
         #     self.logger.log_stat(
         #         "pi_max", (pi.max(dim=-1)[0] * mask).sum().item() / mask.sum().item(), t_env)
         #     self.log_stats_t = t_env
-        return sum1, sum2
+        return self.agent_params, self.critic_params
 
     def train_critic_sequential_meta(self, critic, target_critic, batch, rewards, mask):
         # Optimise critic
