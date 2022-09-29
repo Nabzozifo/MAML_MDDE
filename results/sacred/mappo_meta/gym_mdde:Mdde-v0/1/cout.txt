@@ -1,0 +1,75 @@
+[INFO 13:04:28] pymarl Running command 'my_main'
+[INFO 13:04:28] pymarl Started run with ID "1"
+[DEBUG 13:04:28] pymarl Starting Heartbeat
+[DEBUG 13:04:28] my_main Started
+[WARNING 13:04:28] my_main CUDA flag use_cuda was switched OFF automatically because no CUDA devices are available!
+[INFO 13:04:28] my_main Experiment Parameters:
+[INFO 13:04:28] my_main 
+
+{   'action_selector': 'soft_policies',
+    'add_value_last_step': True,
+    'agent': 'rnn',
+    'agent_output_type': 'pi_logits',
+    'batch_size': 10,
+    'batch_size_run': 1,
+    'buffer_cpu_only': True,
+    'buffer_size': 10,
+    'checkpoint_path': '',
+    'critic_type': 'cv_critic',
+    'entropy_coef': 0.01,
+    'env': 'gymma_meta',
+    'env_args': {   'key': 'gym_mdde:Mdde-v0',
+                    'pretrained_wrapper': None,
+                    'seed': 0,
+                    'state_last_action': False,
+                    'task': {   'Ri': 120000,
+                                'max_episode_steps': 200},
+                    'time_limit': 200},
+    'epochs': 4,
+    'eps_clip': 0.2,
+    'evaluate': False,
+    'gamma': 0.99,
+    'grad_norm_clip': 10,
+    'hidden_dim': 64,
+    'hypergroup': None,
+    'label': 'default_label',
+    'learner': 'ppo_learner_meta',
+    'learner_log_interval': 10000,
+    'load_step': 0,
+    'local_results_path': 'results',
+    'log_interval': 50000,
+    'lr': 0.0005,
+    'lr_meta': 0.0005,
+    'mac': 'basic_mac',
+    'mask_before_softmax': True,
+    'name': 'mappo_meta',
+    'num_tasks': 50,
+    'obs_agent_id': True,
+    'obs_individual_obs': False,
+    'obs_last_action': False,
+    'optim_alpha': 0.99,
+    'optim_eps': 1e-05,
+    'q_nstep': 5,
+    'repeat_id': 1,
+    'runner': 'episode_meta',
+    'runner_log_interval': 10000,
+    'save_model': False,
+    'save_model_interval': 50000,
+    'save_replay': False,
+    'seed': 0,
+    'standardise_returns': False,
+    'standardise_rewards': False,
+    't_max': 2500000,
+    'target_update_interval_or_tau': 0.01,
+    'test_greedy': True,
+    'test_interval': 50000,
+    'test_nepisode': 100,
+    'use_cuda': False,
+    'use_rnn': True,
+    'use_tensorboard': True}
+
+[DEBUG 13:05:03] tensorflow Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+[DEBUG 13:05:05] h5py._conv Creating converter from 7 to 5
+[DEBUG 13:05:05] h5py._conv Creating converter from 5 to 7
+[DEBUG 13:05:05] h5py._conv Creating converter from 7 to 5
+[DEBUG 13:05:05] h5py._conv Creating converter from 5 to 7

@@ -1,0 +1,108 @@
+{
+  "advantage_mean": [
+    0.11214188618875628
+  ],
+  "advantage_mean_T": [
+    1990
+  ],
+  "agent_grad_norm": [
+    0.11417443305253983
+  ],
+  "agent_grad_norm_T": [
+    1990
+  ],
+  "critic_grad_norm": [
+    3.424370288848877
+  ],
+  "critic_grad_norm_T": [
+    1990
+  ],
+  "critic_loss": [
+    0.8969385623931885
+  ],
+  "critic_loss_T": [
+    1990
+  ],
+  "ep_length_mean": [
+    199.0
+  ],
+  "ep_length_mean_T": [
+    1990
+  ],
+  "pg_loss": [
+    -0.12761560082435608
+  ],
+  "pg_loss_T": [
+    1990
+  ],
+  "pi_max": [
+    0.3922796968239636
+  ],
+  "pi_max_T": [
+    1990
+  ],
+  "q_taken_mean": [
+    -0.05008232078360553
+  ],
+  "q_taken_mean_T": [
+    1990
+  ],
+  "return_mean": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 37590.54680044567
+    }
+  ],
+  "return_mean_T": [
+    1990
+  ],
+  "return_std": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 13919.731924664804
+    }
+  ],
+  "return_std_T": [
+    1990
+  ],
+  "target_mean": [
+    0.06205956540515075
+  ],
+  "target_mean_T": [
+    1990
+  ],
+  "td_error_abs": [
+    0.7009972347086998
+  ],
+  "td_error_abs_T": [
+    1990
+  ],
+  "test_ep_length_mean": [
+    199.0
+  ],
+  "test_ep_length_mean_T": [
+    1990
+  ],
+  "test_return_mean": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 42163.22478794041
+    }
+  ],
+  "test_return_mean_T": [
+    1990
+  ],
+  "test_return_std": [
+    {
+      "dtype": "float64",
+      "py/object": "numpy.float64",
+      "value": 17603.309017905874
+    }
+  ],
+  "test_return_std_T": [
+    1990
+  ]
+}
