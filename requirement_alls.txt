@@ -44,7 +44,7 @@ google-auth-oauthlib==0.4.6
 google-pasta==0.2.0
 grpcio==1.43.0
 gym==0.21.0
--e git+https://github.com/uoe-agents/epymarl.git@f047072aedc9a128d28b01ba42ef3381dcad2328#egg=gym_mdde&subdirectory=epymarl-main 2/src/envs/MADE
+-e git+https://github.com/Nabzozifo/MAML_MDDE.git@76e4e49b033edd5112a1e1592a2c491d13406355#egg=gym_mdde&subdirectory=src/envs/MADE
 h5py==3.7.0
 idna==2.7
 imageio==2.21.1
