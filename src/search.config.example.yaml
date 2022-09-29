@@ -1,36 +1,28 @@
 exclude: null
 grid-search:
-
   "--config":
-    - "iql"
-    - "iql_ns"
+    - "mappo"
 
   lr:
     - 0.0001
+    - 0.001
     - 0.0003
     - 0.0005
 
   standardise_rewards:
-    - True
+    - False
 
   use_rnn:
-    - False
+    - True
 
   target_update_interval_or_tau:
     - 200
     - 0.01
+    - 0
 
   hidden_dim:
     - 64
     - 128
-
-  evaluation_epsilon:
-    - 0.0
-    - 0.05
-
-  epsilon_anneal_time:
-    - 50000
-    - 200000
 
   t_max:
     - 2050000
@@ -44,9 +36,9 @@ grid-search:
     - 50000
   save_model:
     - false
-    
+
 grid-search-groups:
   env0:
     - "--env-config": "gymma"
-    - env_args.key: lbforaging:Foraging-8x8-2p-3f-v0
+    - env_args.key: gym-mdde:Mdde-V0
     - env_args.time_limit: 25
