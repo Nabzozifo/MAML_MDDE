@@ -222,7 +222,7 @@ def run_sequential(args, logger):
                 if new_episode_sample.device != args.device:
                     new_episode_sample.to(args.device)
 
-                loss11, loss22 = learner.train_meta(
+                loss11, loss22 = learner.train2(
                     new_episode_sample, runner.t_env, episode)
 
                 # loss1 += loss11

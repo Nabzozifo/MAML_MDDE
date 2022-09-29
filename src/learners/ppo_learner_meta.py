@@ -137,7 +137,7 @@ class PPOMetaLearner:
 
         # return self.agent_params, self.critic_params
 
-        return list(self.mac.parameters()), list(self.critic.parameters())
+        return self.agent_params, self.critic_params
 
     def update_parameters(self, all_actor_param, all_critic_param, learning_rate):
 
@@ -151,10 +151,10 @@ class PPOMetaLearner:
     def update_parameters2(self, all_actor_param, all_critic_param, learning_rate):
 
         with th.no_grad():
-            for param1, param2, sum_param1, sum_param2 in zip(self.mac.parameters(), self.critic.parameters(), all_actor_param, all_critic_param):
+            for param1, param2, sum_param1, sum_param2 in zip(self.agent_params, self.critic_params, all_actor_param, all_critic_param):
                 self.update_function(param1, sum_param1, learning_rate)
-                # self.update_function(param2, sum_param2, learning_rate)
-        self.agent_params = list(self.mac.parameters())
+                self.update_function(param2, sum_param2, learning_rate)
+        # self.agent_params = list(self.mac.parameters())
         # self.critic_params = list(self.critic.parameters())
 
     def update_function(self, param, all_param, learning_rate):
@@ -266,7 +266,7 @@ class PPOMetaLearner:
         #     self.logger.log_stat(
         #         "pi_max", (pi.max(dim=-1)[0] * mask).sum().item() / mask.sum().item(), t_env)
         #     self.log_stats_t = t_env
-        return self.agent_params, self.critic_params
+        return sum1, sum2
 
     def train_critic_sequential_meta(self, critic, target_critic, batch, rewards, mask):
         # Optimise critic
