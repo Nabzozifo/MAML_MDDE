@@ -12,13 +12,11 @@ runner: "episode"
 buffer_size: 5000
 
 # update the target network every {} episodes
-target_update_interval_or_tau: 200
-
+target_update_interval_or_tau: 0.01
 
 obs_agent_id: True
 obs_last_action: False
 obs_individual_obs: False
-
 
 # use the Q_Learner to train
 standardise_returns: False
